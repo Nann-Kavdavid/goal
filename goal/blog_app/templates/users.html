@@ -1,0 +1,32 @@
+{% extends 'blog_base.html' %}
+
+{% block users %}
+    <ul>
+    {% for user in object_list %}
+        <div class="user-profile">
+            <img src="#" id="user-image-profile">
+            <a href="{% url 'blog_app:index-user' username=user %}">{{ user }}</a>
+            <div class="user-giver">
+                <ul>
+                    <h5>As Giver</h5>
+                    <li>Interest:<input type="text"></li>
+                    <li>Giving daily ideas:<input type="text">times</li>
+                    <li>Giving total ideas:<input type="text"></li>
+                    <li>Got merged ideas:<input type="text">times</li>
+                </ul>
+            </div>
+            <div class="user-asker">
+                <ul>
+                    <h5>As Asker</h5>
+                    <li>Goal accomplished:<input type="text">goals</li>
+                    <li>Goal implemented<input type="text">goals</li>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+    </ul>
+{% endblock %}

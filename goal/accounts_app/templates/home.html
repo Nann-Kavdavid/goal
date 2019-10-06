@@ -1,0 +1,44 @@
+{% extends "accounts_base.html" %}
+{% block login %}
+    <div class="container">
+        <h1>Share Goal</h1>
+        <form method="post" action="{% url 'accounts_app:login' %}">
+            {% csrf_token %}
+            <div class="content">
+                {{ login_form.username }}
+                {{ login_form.password }}
+                <input class="btn-block" type="submit" value="Log In">
+            </div>
+            <div class="errors">
+                {% if login_form.errors %}
+                    <p>*** Please enter a correct username and password.</p>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block signup %}
+    <div class="container">
+        {% load static %}
+        <img src="{% static "images/idea_tree.jpg" %}"/>
+            <form method="post" action="{% url 'accounts_app:signup' %}">
+                {% csrf_token %}
+                <div class="errors">
+                    {% if sign_up_form.errors %}
+                        <p>*** Please enter a correct format of username and password.</p>
+                    {% endif %}
+                </div>
+                <div class="sign-up">
+                    <ul>
+                        <li><label>{{ sign_up_form.username.label }}</label></li>
+                        <li>{{ sign_up_form.username }}</li>
+                        <li><label>{{ sign_up_form.password1.label }}</label></li>
+                        <li>{{ sign_up_form.password1 }}</li>
+                        <input type="submit" value="Sign Up">
+                    </ul>
+
+                </div>
+            </form>
+    </div>
+{% endblock %}

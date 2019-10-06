@@ -1,0 +1,41 @@
+h1 {
+    color: forestgreen;
+    font-style: oblique;
+    font-size: 20px;
+    margin-top: 0px;
+}
+img {
+    width: 400px;
+    height: 400px;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.content {
+    margin-right: 0px
+}
+.sign-up {
+    border: solid 1px forestgreen;
+    width: 500px;
+    height: 250px;
+}
+.errors {
+    color: indianred;
+}
+input[type="submit"] {
+    /*float: right;*/
+}
+input[type="submit"]:hover {
+    background-color: green;
+    color: white;
+}
+input[type="text"] {
+    width: 100px;
+}
+input[type="password"] {
+    width: 100px;
+}
+ul {
+  list-style-type: none;
+}

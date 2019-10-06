@@ -1,0 +1,70 @@
+h1 {
+    color: forestgreen;
+    font-style: oblique;
+    font-size: 20px;
+    margin-top: 0px;
+}
+img {
+    width: 400px;
+    height: 400px;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: forestgreen;
+}
+.errors {
+    color: indianred;
+}
+.user-post {
+    font-family: "American Typewriter";
+}
+.user-post-list {
+    justify-content: space-around;
+}
+.each-user-post-list {
+    border: solid 1px darkgreen;
+    font-family: Helvetica;
+    font-size: small;
+}
+input[type="submit"] {
+    /*float: right;*/
+    /*display: none;*/
+}
+input[type="submit"]:hover {
+    background-color: orangered;
+    color: white;
+    border-color: black;
+}
+.fa {
+    font-size: 10px;
+    cursor: pointer;
+    user-select: none;
+    color: orange;
+}
+
+.fa:hover {
+  color: greenyellow;
+}
+
+.comments {
+    color: red;
+}
+
+.user-profile {
+    border: forestgreen solid 3px;
+}
+
+.user-giver {
+    border: darkcyan dotted 2px;
+    margin: 20px 20px 20px 20px;
+}
+
+.user-asker {
+    border: darkmagenta dotted 2px;
+    margin: 20px 20px 20px 20px;
+}
+#user-image-profile {
+    width: 50px;
+    height: 50px;
+}
